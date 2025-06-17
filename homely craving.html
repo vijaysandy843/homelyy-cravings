@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sandy's Kitchen 🍲</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3e8ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f3e8ff;
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    .sub-heading {
+      font-size: 20px;
+      color: black;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+      flex-wrap: wrap;
+    }
+
+    .recipe-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .recipe-card:hover {
+      transform: scale(1.02);
+    }
+
+    .recipe-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .recipe-card h2 {
+      font-size: 22px;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .recipe-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #ff8c42;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .recipe-detail {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #444;
+      background-color: #fff0dc;
+      padding: 10px;
+      border-radius: 8px;
+      display: none;
+      text-align: left;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Homely Craving 👩🏻‍🍳🍲</h1>
+    <div class="sub-heading">Delicious Homemade Recipes Just for You💕</div>
+
+<p style="font-size: 18px; font-family: 'Georgia', serif; color: #444; max-width: 700px; margin: auto; text-align: center; line-height: 1.6;">
+  Homely Craving isn’t just a food page — it’s a feeling we all share. Whether it’s the crisp of a hot masala dosa, the spice of gobi tossed fresh, the richness of paneer butter masala, or the sweet hug of rasgulla and fruit salad ice cream — every dish here is a comfort moment. These 9 recipes are my favorites, and maybe they’re yours too — a reminder of college cravings, home-cooked love, and that one plate we never forget.
+</p>
+<p style="text-align: center; color: #888; font-style: italic;">
+  “Scroll, smile, and crave — welcome home to Homely Craving.❤”
+</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Masala Dosa Card -->
+    <div class="recipe-card">
+      <img src="masala dosa.jpg" alt="Masala Dosa">
+      <h2>Masala Dosa</h2>
+      <p>Crispy dosa filled with spicy potato stuffing. South Indian favorite!</p>
+      <div class="btn" onclick="toggleRecipe('dosa')">View Recipe</div>
+      <div class="recipe-detail" id="dosa">
+        <strong>Ingredients:</strong><br>
+        Dosa batter, potatoes, onion, mustard, curry leaves, turmeric<br><br>
+        <strong>Steps:</strong><br>
+        1. Prepare potato stuffing with spices.<br>
+        2. Spread dosa on hot tawa.<br>
+        3. Add stuffing and fold.<br>
+        4. Serve with chutney and sambar.
+      </div>
+    </div>
+
+    <!-- Gobi Manchurian Card -->
+    <div class="recipe-card">
+      <img src="gobi manchurian.jpeg" alt="Gobi Manchurian">
+      <h2>Gobi Manchurian</h2>
+      <p>Spicy, tangy fried cauliflower bites. Perfect evening snack!</p>
+      <div class="btn" onclick="toggleRecipe('gobi')">View Recipe</div>
+      <div class="recipe-detail" id="gobi">
+        <strong>Ingredients:</strong><br>
+        Cauliflower, corn flour, soy sauce, chili sauce, garlic, spring onions<br><br>
+        <strong>Steps:</strong><br>
+        1. Boil and coat gobi with flour mixture.<br>
+        2. Deep fry till crispy.<br>
+        3. Toss in Manchurian sauce.<br>
+        4. Garnish with spring onion and serve.
+      </div>
+    </div>
+    <!-- Paneer Butter Masala -->
+<div class="recipe-card">
+  <img src="ywbt4aiu.png" alt="Paneer Butter Masala">
+  <h2>Paneer Butter Masala</h2>
+  <p>Rich and creamy tomato-based curry with soft paneer cubes.</p>
+  <div class="btn" onclick="toggleRecipe('paneer')">View Recipe</div>
+  <div class="recipe-detail" id="paneer">
+    <strong>Ingredients:</strong><br>
+    Paneer, tomatoes, butter, cream, ginger-garlic, garam masala<br><br>
+    <strong>Steps:</strong><br>
+    1. Sauté tomatoes, onion, garlic; blend to smooth paste.<br>
+    2. Add butter, masala, paneer cubes.<br>
+    3. Simmer with cream, garnish with coriander.
+  </div>
+</div>
+
+<!-- Veg Biryani -->
+<div class="recipe-card">
+  <img src="vegetable-biryani.jpg" alt="Veg Biryani">
+  <h2>Veg Biryani</h2>
+  <p>Fragrant rice cooked with mixed vegetables and spices.</p>
+  <div class="btn" onclick="toggleRecipe('biryani')">View Recipe</div>
+  <div class="recipe-detail" id="biryani">
+    <strong>Ingredients:</strong><br>
+    Basmati rice, veggies, curd, biryani masala, mint, saffron<br><br>
+    <strong>Steps:</strong><br>
+    1. Marinate vegetables with curd & spices.<br>
+    2. Partially cook rice.<br>
+    3. Layer rice and veggies; cook on dum.<br>
+    4. Serve with raita.
+  </div>
+</div>
+<div class="container"><!-- Upma -->
+<div class="recipe-card">
+  <img src="Vegetable-upma.jpg" alt="Upma">
+  <h2>Upma</h2>
+  <p>Quick and healthy South Indian breakfast with semolina.</p>
+  <div class="btn" onclick="toggleRecipe('upma')">View Recipe</div>
+  <div class="recipe-detail" id="upma">
+    <strong>Ingredients:</strong><br>
+    Rava, mustard seeds, curry leaves, onion, water, salt<br><br>
+    <strong>Steps:</strong><br>
+    1. Roast rava and keep aside.<br>
+    2. Temper mustard, curry leaves, onion.<br>
+    3. Add water, boil, then add rava.<br>
+    4. Stir well and cook until soft.
+  </div>
+</div>
+
+<!-- Mango Lassi -->
+<div class="recipe-card">
+  <img src="14ga5qfg.png" alt="Mango Lassi">
+  <h2>Mango Lassi</h2>
+  <p>Refreshing chilled drink made with ripe mango and yogurt.</p>
+  <div class="btn" onclick="toggleRecipe('lassi')">View Recipe</div>
+  <div class="recipe-detail" id="lassi">
+    <strong>Ingredients:</strong><br>
+    Ripe mango, yogurt, sugar, cardamom, ice cubes<br><br>
+    <strong>Steps:</strong><br>
+    1. Blend mango pulp, yogurt, sugar and cardamom.<br>
+    2. Add ice and blend again.<br>
+    3. Pour into glass, garnish with mint.
+  </div>
+</div>
+<!-- Gulab Jamun -->
+<div class="recipe-card">
+  <img src="30562381266_8994c463dd_z.jpg" alt="Gulab Jamun">
+  <h2>Gulab Jamun</h2>
+  <p>Soft balls soaked in rose-flavored sugar syrup.</p>
+  <div class="btn" onclick="toggleRecipe('jamun')">View Recipe</div>
+  <div class="recipe-detail" id="jamun">
+    <strong>Ingredients:</strong><br>
+    Milk powder, maida, ghee, sugar, rose water<br><br>
+    <strong>Steps:</strong><br>
+    1. Make dough from milk powder.<br>
+    2. Roll into balls and deep fry.<br>
+    3. Soak in warm sugar syrup.
+  </div>
+</div>
+
+<!-- Rasgulla -->
+<div class="recipe-card">
+  <img src="Rasgulla-Image-_3_grande.webp" alt="Rasgulla">
+  <h2>Rasgulla</h2>
+  <p>Juicy, spongy sweet made with paneer.</p>
+  <div class="btn" onclick="toggleRecipe('rasgulla')">View Recipe</div>
+  <div class="recipe-detail" id="rasgulla">
+    <strong>Ingredients:</strong><br>
+    Milk, lemon juice, sugar, cardamom<br><br>
+    <strong>Steps:</strong><br>
+    1. Curdle milk and make chenna.<br>
+    2. Knead and make balls.<br>
+    3. Cook in sugar syrup.
+  </div>
+</div>
+<!--Fruit salad with Ice Cream-->
+<div class="recipe-card">
+  <img src="OIP.jpeg" alt="Fruit Salad Ice Cream">
+  <h2>Fruit Salad with Ice Cream</h2>
+  <p>Chilled mixed fruits topped with creamy vanilla ice cream.</p>
+  <div class="btn" onclick="toggleRecipe('salad')">View Recipe</div>
+  <div class="recipe-detail" id="salad">
+    <strong>Ingredients:</strong><br>
+    Apple, banana, mango, grapes, ice cream, honey<br><br>
+    <strong>Steps:</strong><br>
+    1. Chop all fruits and mix in a bowl.<br>
+    2. Drizzle with honey.<br>
+    3. Scoop vanilla ice cream on top.<br>
+    4. Serve immediately.
+  </div>
+</div>
+
+
+  </div>
+
+  <footer>
+    © 2025 Homely Craving | Made with ❤ in Thirthahalli
+  </footer>
+  <p style="text-align:center;
+    font-style:italic; margin-top:40px">
+    "Cooking is love made visible ,Thank you for visiting Homely Craving -- where every recipe is a memory waiting to be made."💕
+    </p>
+    <p style="text-align:center; margin-top:20px;">
+      <a href="https://sinfullyspicy.com" target="_blank" style="text-decoration: none; color:#ff6f61; font-weight:bold;">
+        Click here for more deleicious recipes!
+      </a>
+      </p>
+
+  <script>
+    function toggleRecipe(id) {
+      var recipe = document.getElementById(id);
+      recipe.style.display = recipe.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
